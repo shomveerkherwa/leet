@@ -7,8 +7,8 @@ package model;
 
 public class ListNode {
 
-	private int val;
-	private ListNode next;
+	public int val;
+	public ListNode next;
 
 	public ListNode(int value) {
 		this.val = value;
