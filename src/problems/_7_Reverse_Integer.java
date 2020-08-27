@@ -1,7 +1,7 @@
 package problems;
 
 /*
-Given a 32-bit signed integer, reverse digits of an integer.
+Given a 32-bit signed integer, reverse digits of an integer. Example 214 -> 412 
 */
 /*
  * Assume we are dealing with an environment which could only store integers within the 32-bit 
