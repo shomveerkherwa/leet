@@ -10,8 +10,8 @@ package problems;
 public class _35_Search_Insert_Position {
 
 	public static void main(String[] args) {
-		int[] nums = {1,2,5,7,9,12,14};
-		int target = 10;
+		int[] nums = { 1, 3, 5, 6, 9, 12, 14 };
+		int target = 2;
 		int index = soultion(nums, target);
 		System.out.println("insert "+target+" at index "+index);
 	}
@@ -32,7 +32,7 @@ public class _35_Search_Insert_Position {
 	 */
 	private static int searchInsertPosition(int[] nums, int target, int start, int end) {
 		
-		if(start< end) {
+		if(start <= end) {
 			
 			int mid = (start + end) /2;
 			int midVal = nums[mid];
