@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class _189_Rotate_Array {
 
 	public static void main(String[] args) {
-		int[] input = {-1};
-		int k=2;
+		int[] input = {1, 2};
+		int k=3;
 		System.out.println(Arrays.toString(input));
 		int[] output = rotate(input, k);
 		System.out.println(Arrays.toString(output));
@@ -14,6 +14,7 @@ public class _189_Rotate_Array {
 	}
 
 	private static int[] rotate(int[] input, int k) {
+		k = k <= (input.length -1) ? k : (k % input.length);
 		int rotationStart = input.length;
 		int steps = k;
 		
