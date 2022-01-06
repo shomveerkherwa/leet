@@ -14,6 +14,7 @@ public class _189_Rotate_Array {
 	}
 
 	private static int[] rotate(int[] input, int k) {
+		// condition to check the minimum rotation
 		k = k <= (input.length -1) ? k : (k % input.length);
 		int rotationStart = input.length;
 		int steps = k;
@@ -24,7 +25,6 @@ public class _189_Rotate_Array {
 		}
 		
 		int[] output = new int[input.length];
-		
 		int newArrayPointer = 0;
 		while(rotationStart < input.length) {
 			output[newArrayPointer++] = input[rotationStart++];
