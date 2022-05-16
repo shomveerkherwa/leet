@@ -19,6 +19,34 @@ public class LinkedListHelper {
 		return head;
 	}
 	
+	public static ListNode createRandomSortedList1() {
+		ListNode five = new ListNode(35);
+		ListNode four = new ListNode(24);
+			four.setNext(five);
+		ListNode three = new ListNode(13);
+			three.setNext(four);
+		ListNode two = new ListNode(7);
+			two.setNext(three);
+		ListNode one = new ListNode(4);
+			one.setNext(two);
+		ListNode head = one;
+		return head;
+	}
+	
+	public static ListNode createRandomSortedList2() {
+		ListNode five = new ListNode(23);
+		ListNode four = new ListNode(19);
+			four.setNext(five);
+		ListNode three = new ListNode(11);
+			three.setNext(four);
+		ListNode two = new ListNode(3);
+			two.setNext(three);
+		ListNode one = new ListNode(2);
+			one.setNext(two);
+		ListNode head = one;
+		return head;
+	}
+	
 	public static void display(ListNode current) {
 		while(current != null) {
 			System.out.print(current.getVal() +" -> \t" );
