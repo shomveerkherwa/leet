@@ -6,8 +6,8 @@ import java.util.Map;
 public class IsAnagram {
 
 	public static void main(String[] args) {
-		String inp = "rat";
-		String out = "cart";
+		String inp = "cart";
+		String out = "rat";
 		boolean result = checkAnagram(inp, out);
 		System.out.println("isAnagram? "+ result );
 	}

@@ -1,13 +1,10 @@
 package problems.strings;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class IsAnagramApproach2 {
 
 	public static void main(String[] args) {
 		String inp = "rat";
-		String out = "car";
+		String out = "tar";
 		boolean result = checkAnagram(inp, out);
 		System.out.println("isAnagram? "+ result );
 	}

@@ -72,7 +72,6 @@ public class BinaryTreeHelper {
 		Stack<TreeNode> pathStack = new Stack<TreeNode>();
 		
 		stack.push(root);
-		
 		while(root != null && !stack.isEmpty()) {
 				root = stack.peek();
 				

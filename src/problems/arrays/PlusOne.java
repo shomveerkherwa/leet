@@ -6,7 +6,7 @@ public class PlusOne {
 
 	public static void main(String[] args) {
 		
-		int[] inp = {3,9};
+		int[] inp = {9,9};
 		System.out.println("input "+Arrays.toString(inp));
 		int[] output = plusOne(inp);
 		System.out.println("output "+Arrays.toString(output));

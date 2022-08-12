@@ -1,6 +1,6 @@
-package datastructure;
+package problems;
 
-public class Utility {
+public class CommonPrefix {
 
 	public static void main(String[] args) {
 		String[] strs = {"flower","flow","flight"};
@@ -15,11 +15,9 @@ public class Utility {
 	private static String commonPrefix(String[] strs) {
 		if(strs == null || strs.length == 0)
 			return "";
-		
 		int length = strs.length;
 		int i=0;
 		String prefix = strs[i];
-		
 		while(i < length) {
 			int condition = strs[i].indexOf(prefix);
 			while(condition != 0) {
@@ -31,5 +29,4 @@ public class Utility {
 		}
 		return prefix;
 	}
-
 }

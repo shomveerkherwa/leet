@@ -19,6 +19,18 @@ public class LinkedListHelper {
 		return head;
 	}
 	
+	public static ListNode createCustomeList(int[] inp) {
+		ListNode head = null;
+		ListNode prev = null;
+		for(int i : inp) {
+			ListNode current = new ListNode(i);
+			if(head == null) head = current;
+			if(prev != null) prev.next = current;
+			prev = current;
+		}
+		return head;
+	}
+	
 	public static ListNode createRandomSortedList1() {
 		ListNode five = new ListNode(35);
 		ListNode four = new ListNode(24);
