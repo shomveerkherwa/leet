@@ -3,7 +3,8 @@ package problems.arrays;
 public class BuyAndSellStocks2 {
 
 	public static void main(String[] args) {
-		int[] prices = {7,3,5,7,6,4};
+		//int[] prices = {7,1,5,3,6,4};
+		int[] prices = {1,2,3,4,5,6};
 		int maxProfit = getMaxProfitThatCanBeAchieved(prices);
 		System.out.println("maxProfit "+maxProfit);
 	}
@@ -20,4 +21,4 @@ public class BuyAndSellStocks2 {
 		return maxProfit;
 	}
 
-}
+} 

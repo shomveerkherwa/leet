@@ -5,8 +5,9 @@ public class _167_Two_Sum2_Pointers {
 
 	public static void main(String[] args) {
 
-		int[] inp = { 2, 7, 11, 15 };
-		int target = 9;
+		//int[] inp = { 2, 7, 11, 15 };int target = 9;
+		int[] inp = {3,2,4};int target = 6;
+		
 		int[] indicies = getIndiciesThatSumUpToTarget(inp, target);
 		if (indicies[0] != -1) {
 			System.out.println(target + "-> " + inp[indicies[0]] + " + " + inp[indicies[1]]);

@@ -1,5 +1,7 @@
 package utility;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 import model.TreeNode;
@@ -21,6 +23,39 @@ public class BinaryTreeHelper {
 		TreeNode one = new TreeNode(1, two, three);
 		
 		return one;
+	}
+	
+	public static TreeNode testCaseTree() {
+		TreeNode five = new TreeNode(5);
+		
+		//  4 	<----- 2 ----->  5
+		TreeNode two = new TreeNode(2, null, five);
+		//  6 	<----- 3 ----->  7
+		TreeNode three = new TreeNode(3);
+		//  2 	<----- 1 -----> 3
+		TreeNode one = new TreeNode(1, two, three);
+		
+		return one;
+	}
+	
+	public static TreeNode createTreeFromArray(Integer[] arr, int i) {
+		    TreeNode root = null;
+		    // Base case for recursion
+	        if (i < arr.length) {
+				if (arr[i] != null)
+				{
+					root = new TreeNode(arr[i]);
+				} else
+					return null;
+	  
+				if(root != null) {
+				// insert left child
+				root.left = createTreeFromArray(arr, 2 * i + 1);
+				// insert right child
+				root.right = createTreeFromArray(arr, 2 * i + 2);
+				}
+	  }
+	        return root;
 	}
 	
 	public static TreeNode createRightDominatTree() {
@@ -74,7 +109,6 @@ public class BinaryTreeHelper {
 		stack.push(root);
 		while(root != null && !stack.isEmpty()) {
 				root = stack.peek();
-				
 				if (!pathStack.isEmpty() && pathStack.peek() == root) {
 					System.out.println(stack.pop().val);
 					pathStack.pop();
@@ -90,20 +124,17 @@ public class BinaryTreeHelper {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public static void LevelOrderTraversal(TreeNode root) {
+		Queue<TreeNode> queue = new LinkedList<TreeNode>();
+		queue.offer(root);
+		while (!queue.isEmpty()) {
+			root = queue.poll();
+			System.out.print(root.val + " \t");
+			if (root.left != null)
+				queue.offer(root.left);
+			if (root.right != null)
+				queue.offer(root.right);
+		}
+	}
 	
 }

@@ -38,7 +38,6 @@ public class TreeTraversal {
 			}
 			// only hope , get what we added and decide your next action
 			root = stack.pop();
-			
 			if(root.right != null && !stack.isEmpty() && root.right == stack.peek()) {
 				stack.pop( );
                 stack.push( root );
@@ -47,7 +46,6 @@ public class TreeTraversal {
 				System.out.print(root.val+" ");
                 root = null;
 			}
-			
 		}
 	}
 
