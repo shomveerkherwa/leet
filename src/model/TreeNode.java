@@ -22,5 +22,10 @@ public class TreeNode {
 		this.left = l;
 		this.right = r;
 	}
+
+	@Override
+	public String toString() {
+		return "[val=" + val + "]";
+	}
 	
 }

@@ -38,6 +38,29 @@ public class BinaryTreeHelper {
 		return one;
 	}
 	
+	public static TreeNode createTreeFromArray(Integer[] nums) {
+		if (nums == null || nums.length == 0) {
+			return null;
+		}
+		TreeNode root = new TreeNode(nums[0]);
+		Queue<TreeNode> q = new LinkedList<>();
+		q.add(root);
+		int i = 1;
+		while (i < nums.length) {
+			TreeNode curr = q.remove();
+			if (i < nums.length) {
+				curr.left = new TreeNode(nums[i++]);
+				q.add(curr.left);
+			}
+			if (i < nums.length) {
+				curr.right = new TreeNode(nums[i++]);
+				q.add(curr.right);
+			}
+		}
+		return root;
+	}
+	
+	
 	public static TreeNode createTreeFromArray(Integer[] arr, int i) {
 		    TreeNode root = null;
 		    // Base case for recursion
